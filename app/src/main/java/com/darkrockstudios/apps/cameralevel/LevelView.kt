@@ -56,10 +56,11 @@ class LevelView
         canvas?.apply {
             val centerY = (height / 2).toFloat()
             val centerX = (width / 2).toFloat()
+            val halfWidth = (width / 2).toFloat()
 
             rotate(roll, centerX, centerY)
 
-            drawLine(0f, centerY, width.toFloat(), centerY, paint)
+            drawLine(-halfWidth, centerY, width.toFloat() + halfWidth, centerY, paint)
         }
     }
 
